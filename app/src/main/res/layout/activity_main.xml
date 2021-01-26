@@ -12,7 +12,7 @@
         android:layout_height="62dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/bonjour_et_bienvenu_sur_androiderestaurant"
+        android:text="@string/bonjour_et_bienvenue_sur_androiderestaurant"
 
         android:textColor="#14568A"
         android:textSize="24sp"
@@ -42,46 +42,34 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/textView" />
 
-    <TextView
-        android:id="@+id/textView3"
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:layout_marginEnd="16dp"
-        android:clickable="true"
-        android:text="Entrée"
-        android:textColor="#2196F3"
-        android:textSize="30sp"
+        android:text="Entrées"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <TextView
-        android:id="@+id/textView4"
+    <Button
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:layout_marginEnd="16dp"
-        android:clickable="true"
         android:text="Plats"
-        android:textColor="#2196F3"
-        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
-    <TextView
-        android:id="@+id/textView5"
+    <Button
+        android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:layout_marginEnd="16dp"
-        android:clickable="true"
-        android:text="Dessert"
-        android:textColor="#2196F3"
-        android:textSize="30sp"
+        android:text="Desserts"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
