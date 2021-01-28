@@ -3,6 +3,7 @@ package fr.isen.gunia.androiderestaurant
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import fr.isen.gunia.androiderestaurant.databinding.ActivityHomeBinding
 
@@ -32,5 +33,9 @@ class HomeActivity : AppCompatActivity() {
             val intent = Intent(this, ListActivity::class.java)
             startActivity(intent)
         }
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("HomeActivity","Destroyed")
     }
 }
