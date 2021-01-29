@@ -40,5 +40,11 @@ class HomeActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         Log.d("HomeActivity","Destroyed")
+
+
+    }
+
+    companion object {
+        const val CATEGORY = "category"
     }
 }
