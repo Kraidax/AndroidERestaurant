@@ -7,4 +7,6 @@
     <string name="desserts">Desserts</string>
     <string name="entr_es">Entrées</string>
     <string name="titleList"></string>
+    <string name="textview">TextView</string>
+    <string name="category">category</string>
 </resources>

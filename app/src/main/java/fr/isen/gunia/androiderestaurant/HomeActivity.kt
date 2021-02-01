@@ -18,21 +18,21 @@ class HomeActivity : AppCompatActivity() {
         binding.BEntrees.setOnClickListener{
             val toast = Toast.makeText(applicationContext,"Vous êtes sur les entrées", Toast.LENGTH_SHORT)
             toast.show()
-            val intent = Intent(this, ListActivity::class.java)
+            val intent = Intent(this, CategoryActivity::class.java)
             intent.putExtra("category",getString(R.string.entr_es))
             startActivity(intent)
         }
         binding.BPlats.setOnClickListener{
             val toast = Toast.makeText(applicationContext,"Vous êtes sur les plats", Toast.LENGTH_SHORT)
             toast.show()
-            val intent = Intent(this, ListActivity::class.java)
+            val intent = Intent(this, CategoryActivity::class.java)
             intent.putExtra("category",getString(R.string.plats))
             startActivity(intent)
         }
         binding.BDesserts.setOnClickListener{
             val toast = Toast.makeText(applicationContext,"Vous êtes sur les desserts", Toast.LENGTH_SHORT)
             toast.show()
-            val intent = Intent(this, ListActivity::class.java)
+            val intent = Intent(this, CategoryActivity::class.java)
             intent.putExtra("category",getString(R.string.desserts))
             startActivity(intent)
         }
@@ -42,6 +42,12 @@ class HomeActivity : AppCompatActivity() {
         Log.d("HomeActivity","Destroyed")
 
 
+    }
+
+    private fun statCategoryActivity(item: ItemType) {
+        val intent = Intent(this, CategoryActivity::class.java)
+        intent.putExtra(CATEGORY, item)
+        startActivity(intent)
     }
 
     companion object {
