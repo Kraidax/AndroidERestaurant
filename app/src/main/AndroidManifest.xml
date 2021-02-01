@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="fr.isen.gunia.androiderestaurant">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,8 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidERestaurant"
+        android:usesCleartextTraffic="true"
         tools:ignore="ExtraText">
-        <activity android:name=".DetailsActivity" />
+        <activity android:name=".network.Price"></activity>
+        <activity android:name=".network.NetworkConstant" />
+        <activity android:name=".network.MenuResult" />
+        <activity android:name=".network.Ingredient" />
+        <activity android:name=".network.Dish" />
+        <activity android:name=".network.Category" />
+        <activity android:name=".details.DetailsActivity" />
         <activity android:name=".CategoryActivity" />
         <activity android:name=".HomeActivity">
             <intent-filter>

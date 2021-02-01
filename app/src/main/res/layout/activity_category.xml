@@ -7,11 +7,10 @@
     tools:context=".CategoryActivity">
 
     <TextView
-        android:id="@+id/categoryTitle"
+        android:id="@+id/category_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="@string/category"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,6 +28,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/categoryTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/category_title" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

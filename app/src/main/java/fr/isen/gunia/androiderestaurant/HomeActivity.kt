@@ -18,23 +18,17 @@ class HomeActivity : AppCompatActivity() {
         binding.BEntrees.setOnClickListener{
             val toast = Toast.makeText(applicationContext,"Vous êtes sur les entrées", Toast.LENGTH_SHORT)
             toast.show()
-            val intent = Intent(this, CategoryActivity::class.java)
-            intent.putExtra("category",getString(R.string.entr_es))
-            startActivity(intent)
+            startCategoryActivity(ItemType.STARTER)
         }
         binding.BPlats.setOnClickListener{
             val toast = Toast.makeText(applicationContext,"Vous êtes sur les plats", Toast.LENGTH_SHORT)
             toast.show()
-            val intent = Intent(this, CategoryActivity::class.java)
-            intent.putExtra("category",getString(R.string.plats))
-            startActivity(intent)
+            startCategoryActivity(ItemType.MAIN)
         }
         binding.BDesserts.setOnClickListener{
             val toast = Toast.makeText(applicationContext,"Vous êtes sur les desserts", Toast.LENGTH_SHORT)
             toast.show()
-            val intent = Intent(this, CategoryActivity::class.java)
-            intent.putExtra("category",getString(R.string.desserts))
-            startActivity(intent)
+            startCategoryActivity(ItemType.DESSERT)
         }
     }
     override fun onDestroy() {
@@ -44,7 +38,7 @@ class HomeActivity : AppCompatActivity() {
 
     }
 
-    private fun statCategoryActivity(item: ItemType) {
+    private fun startCategoryActivity(item: ItemType) {
         val intent = Intent(this, CategoryActivity::class.java)
         intent.putExtra(CATEGORY, item)
         startActivity(intent)

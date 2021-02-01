@@ -1,12 +1,10 @@
 <resources>
     <string name="app_name">AndroidERestaurant</string>
     <string name="bonjour_et_bienvenue_sur_androiderestaurant">Bonjour et bienvenue sur AndroidERestaurant</string>
-    <string name="todo">TODO</string>
     <string name="que_voulez_vous_commander">Que voulez vous commander ?</string>
+
     <string name="plats">Plats</string>
     <string name="desserts">Desserts</string>
     <string name="entr_es">Entrées</string>
-    <string name="titleList"></string>
-    <string name="textview">TextView</string>
-    <string name="category">category</string>
+
 </resources>
