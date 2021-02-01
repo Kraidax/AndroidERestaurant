@@ -14,13 +14,7 @@
         android:theme="@style/Theme.AndroidERestaurant"
         android:usesCleartextTraffic="true"
         tools:ignore="ExtraText">
-        <activity android:name=".network.Price"></activity>
-        <activity android:name=".network.NetworkConstant" />
-        <activity android:name=".network.MenuResult" />
-        <activity android:name=".network.Ingredient" />
-        <activity android:name=".network.Dish" />
-        <activity android:name=".network.Category" />
-        <activity android:name=".details.DetailsActivity" />
+        <activity android:name=".details.DetailActivity" />
         <activity android:name=".CategoryActivity" />
         <activity android:name=".HomeActivity">
             <intent-filter>
