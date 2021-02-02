@@ -14,7 +14,6 @@
         android:theme="@style/Theme.AndroidERestaurant"
         android:usesCleartextTraffic="true"
         tools:ignore="ExtraText">
-        <activity android:name=".basket.BasketAdapter"></activity>
         <activity android:name=".basket.BasketActivity" />
         <activity android:name=".BaseActivity" />
         <activity android:name=".details.DetailActivity" />

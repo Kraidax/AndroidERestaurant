@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "fr.isen.gunia.androiderestaurant"
+  "applicationId": "fr.isen.gunia.androiderestaurant",
   "variantName": "processReleaseResources",
   "elements": [
     {
@@ -15,4 +15,4 @@
       "outputFile": "app-release.apk"
     }
   ]
-} 
+}
