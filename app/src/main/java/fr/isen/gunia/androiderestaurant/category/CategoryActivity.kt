@@ -36,7 +36,7 @@ enum class ItemType {
 
 private lateinit var bindind: ActivityCategoryBinding
 
-class CategoryActivity : AppCompatActivity() {
+class CategoryActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bindind = ActivityCategoryBinding.inflate(layoutInflater)

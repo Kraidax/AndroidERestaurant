@@ -8,5 +8,9 @@
     <string name="entr_es">Entrées</string>
 
     <string name="total">Total</string>
+    <string name="basket_validation">Votre plat a bien été ajouté au panier</string>
+    <string name="basket">Panier</string>
+    <string name="order">Passer votre commande</string>
+    <string name="quantity">Quantité :</string>
 
 </resources>

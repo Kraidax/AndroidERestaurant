@@ -25,7 +25,7 @@ class PhotoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val url = arguments?.getString(URL)
-        url?.let {
+        if(url?.isNotEmpty() == true) {
             Picasso.get().load(url).placeholder(R.drawable.chef_android).into(binding.photo)
         }
     }
