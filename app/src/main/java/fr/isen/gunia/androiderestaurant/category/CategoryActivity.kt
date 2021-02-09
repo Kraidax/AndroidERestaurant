@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
@@ -16,7 +15,7 @@ import fr.isen.gunia.androiderestaurant.network.NetworkConstant
 import org.json.JSONObject
 import com.android.volley.Request
 import fr.isen.gunia.androiderestaurant.category.CategoryAdapter
-import fr.isen.gunia.androiderestaurant.details.DetailActivity
+import fr.isen.gunia.androiderestaurant.detail.DetailActivity
 
 
 enum class ItemType {
@@ -43,6 +42,12 @@ class CategoryActivity : BaseActivity() {
         setContentView(bindind.root)
 
         val selectedItem = intent.getSerializableExtra(HomeActivity.CATEGORY) as? ItemType
+
+        bindind.swipeLayout.setOnRefreshListener {
+            resetCache()
+            makeRequest(selectedItem)
+        }
+
         bindind.categoryTitle.text = getCategoryTitle(selectedItem)
 
         loadList(listOf<Dish>())
@@ -54,6 +59,8 @@ class CategoryActivity : BaseActivity() {
         resultFromCache()?.let {
             parseResult(it, selectedItem)
         } ?: run {
+            val loader = Loader()
+            loader.show(this, "récupération du menu")
             val queue = Volley.newRequestQueue(this)
             val url = NetworkConstant.BASE_URL + NetworkConstant.PATH_MENU
             val jsonData = JSONObject()
@@ -65,11 +72,15 @@ class CategoryActivity : BaseActivity() {
                 url,
                 jsonData,
                 { response ->
+                    loader.hide(this)
+                    bindind.swipeLayout.isRefreshing = false
                     cacheResult(response.toString())
                     parseResult(response.toString(), selectedItem)
 
                 },
                 { error ->
+                    loader.hide(this)
+                    bindind.swipeLayout.isRefreshing = false
                     error.message?.let {
                         Log.d("request", it)
                     } ?: run {
@@ -86,6 +97,14 @@ class CategoryActivity : BaseActivity() {
         val sharedPreferences = getSharedPreferences(USER_PREFERENCES_NAME, Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.putString(REQUEST_CACHE, response)
+        editor.apply()
+    }
+
+
+    private fun resetCache() {
+        val sharedPreferences = getSharedPreferences(USER_PREFERENCES_NAME, Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.remove(REQUEST_CACHE)
         editor.apply()
     }
 

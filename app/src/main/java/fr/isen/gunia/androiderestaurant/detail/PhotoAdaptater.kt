@@ -1,4 +1,4 @@
-package fr.isen.gunia.androiderestaurant.details
+package fr.isen.gunia.androiderestaurant.detail
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment

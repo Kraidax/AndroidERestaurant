@@ -2,13 +2,13 @@ package fr.isen.gunia.androiderestaurant
 
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import android.view.Menu
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
+import fr.isen.gunia.androiderestaurant.basket.Basket
 import fr.isen.gunia.androiderestaurant.basket.BasketActivity
-import fr.isen.gunia.androiderestaurant.details.DetailActivity
+import fr.isen.gunia.androiderestaurant.detail.DetailActivity
 
 open class BaseActivity: AppCompatActivity() {
 
@@ -22,8 +22,10 @@ open class BaseActivity: AppCompatActivity() {
         countText?.text = count.toString()
 
         menuView?.setOnClickListener {
-            val intent = Intent(this, BasketActivity::class.java)
-            startActivity(intent)
+            if(count > 0) {
+                val intent = Intent(this, BasketActivity::class.java)
+                startActivity(intent)
+            }
         }
 
         return true
@@ -35,7 +37,7 @@ open class BaseActivity: AppCompatActivity() {
     }
 
     private fun getItemsCount(): Int {
-        val sharedPreferences = getSharedPreferences(DetailActivity.USER_PREFERENCES_NAME, Context.MODE_PRIVATE)
-        return sharedPreferences.getInt(DetailActivity.ITEMS_COUNT, 0)
+        val sharedPreferences = getSharedPreferences(Basket.USER_PREFERENCES_NAME, Context.MODE_PRIVATE)
+        return sharedPreferences.getInt(Basket.ITEMS_COUNT, 0)
     }
 }

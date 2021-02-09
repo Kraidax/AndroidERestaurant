@@ -1,4 +1,4 @@
-package fr.isen.gunia.androiderestaurant.details
+package fr.isen.gunia.androiderestaurant.detail
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -14,8 +14,8 @@ class PhotoFragment : Fragment() {
     private lateinit var binding: FragmentPhotoBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         binding = FragmentPhotoBinding.inflate(inflater, container, false)
         return binding.root
@@ -25,6 +25,7 @@ class PhotoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val url = arguments?.getString(URL)
+
         if(url?.isNotEmpty() == true) {
             Picasso.get().load(url).placeholder(R.drawable.chef_android).into(binding.photo)
         }

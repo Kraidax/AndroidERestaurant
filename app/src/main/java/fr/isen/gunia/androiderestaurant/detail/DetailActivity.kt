@@ -1,16 +1,13 @@
-package fr.isen.gunia.androiderestaurant.details
+package fr.isen.gunia.androiderestaurant.detail
 
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import com.google.android.material.snackbar.Snackbar
-import com.google.gson.GsonBuilder
 import fr.isen.gunia.androiderestaurant.BaseActivity
 import fr.isen.gunia.androiderestaurant.R
 import fr.isen.gunia.androiderestaurant.basket.Basket
 import fr.isen.gunia.androiderestaurant.basket.BasketItem
-import fr.isen.gunia.androiderestaurant.databinding.ActivityDetailsBinding
+import fr.isen.gunia.androiderestaurant.databinding.ActivityDetailBinding
 import fr.isen.gunia.androiderestaurant.network.Dish
 import kotlin.math.max
 
@@ -21,11 +18,11 @@ class DetailActivity : BaseActivity() {
         const val USER_PREFERENCES_NAME = "USER_PREFERENCES_NAME"
     }
 
-    lateinit var binding: ActivityDetailsBinding
+    lateinit var binding: ActivityDetailBinding
     private var itemCount = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDetailsBinding.inflate(layoutInflater)
+        binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val dish = intent.getSerializableExtra(DISH_EXTRA) as? Dish
