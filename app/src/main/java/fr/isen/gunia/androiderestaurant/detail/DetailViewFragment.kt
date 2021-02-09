@@ -1,15 +1,12 @@
 package fr.isen.gunia.androiderestaurant.detail
 
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import fr.isen.gunia.androiderestaurant.R
 import fr.isen.gunia.androiderestaurant.databinding.FragmentDetailViewBinding
-import fr.isen.gunia.androiderestaurant.databinding.FragmentPhotoBinding
 import fr.isen.gunia.androiderestaurant.network.Dish
 
 

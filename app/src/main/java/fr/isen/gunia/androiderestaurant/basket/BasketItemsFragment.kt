@@ -8,9 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import fr.isen.gunia.androiderestaurant.R
 import fr.isen.gunia.androiderestaurant.databinding.FragmentBasketItemsBinding
-import fr.isen.gunia.androiderestaurant.databinding.FragmentDetailViewBinding
 
 
 class BasketItemsFragment(private val basket: Basket, private val delegate: BasketCellInterface) : Fragment(), BasketCellInterface {

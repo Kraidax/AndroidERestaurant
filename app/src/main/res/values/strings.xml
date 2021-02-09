@@ -23,10 +23,10 @@
     <string name="login">Se connecter</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome!"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+    <string name="action_sign_in">Connexion ou inscription</string>
+    <string name="action_sign_in_short">Connexion</string>
+    <string name="welcome">"Bienvenue !"</string>
+    <string name="invalid_username">Prénom non valide</string>
+    <string name="invalid_password">Le mot de passe doit avoir plus de 5 caractères</string>
+    <string name="login_failed">"Connexion échouée"</string>
 </resources>
